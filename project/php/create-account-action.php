@@ -1,25 +1,35 @@
-<?php require_once('header.php');?>
+<?php require_once('./header.php');?>
 <div>
     <?php 
-        require_once('database-connection.php');
+        //require_once('database-connection.php');
+        $host = "localhost:3306";
+        $user = "root";
+        $password = "familia4G@";
+        $database= "tcc_etec";
+        $connection = new mysqli($host, $user, $password, $database);
+        if ($connection->connect_error){
+            die("Connection failed: ". $connection->connect_error);
+        }
         $occupation = $_POST['occupation'];
-        $sql = "INSERT INTO student (st_login, st_password, st_grade) VALUES ('".$_POST['createName']."', '".$_POST['createPassword']."','".$_POST['grade']."')";
-
          
         if($occupation === "student"){
-            $sql = "INSERT INTO student (st_login, st_password, st_grade) VALUES ('".$_POST['createName']."', '".$_POST['createPassword']."','".$_POST['grade']."')";
+            $sql = "INSERT INTO  VALUES ('".$_POST['createName']."', '".$_POST['createPassword']."','".$_POST['grade']."')";
 
             if ($connection->query($sql) === TRUE) {
                 echo '
                 <a href="../index.php">
+                    <h1>
                     Cadastro realizado com sucesso!
-                </a> 
+                    </h1>
+                    </a> 
                 ';
                 
             } else {
                 echo '
                 <a href="../index.php">
-                    Erro
+                    <h1>
+                    Erro em estudante
+                    </h1>
                 </a> 
                 ';
             }
@@ -28,19 +38,23 @@
 
         elseif ($occupation === "teacher"){
 
-            $sql = "INSERT INTO teacher (teacher_login, teacher_password) VALUES ('".$_POST['createName']."', '".$_POST['createPassword']."')";
+            $sql = "INSERT INTO  VALUES ('".$_POST['createName']."', '".$_POST['createPassword']."')";
 
             if ($connection->query($sql) === TRUE) {
                 echo '
                 <a href="../index.php">
+                    <h1>
                     Cadastro realizado com sucesso!
-                </a> 
+                    </h1>
+                    </a> 
                 ';
                 
             } else {
                 echo '
                 <a href="../index.php">
-                    Erro
+                    <h1>
+                    Erro em prof
+                    </h1>
                 </a> 
                 ';
             }
@@ -49,11 +63,13 @@
         else {
             echo '
                 <a href="../index.php">
-                    Erro
-                </a> 
+                    <h1>
+                    Erro pois nenhum funcionou
+                    </h1>
+                    </a> 
                 ';
             $connection->close();   
         }
     ?>
 </div>
-<?php require_once('footer.php'); ?>
+<?php require_once('./footer.php'); ?>

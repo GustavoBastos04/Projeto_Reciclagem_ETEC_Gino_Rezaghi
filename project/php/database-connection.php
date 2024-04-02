@@ -1,14 +1,12 @@
 
 <?php
     $host = "";
-    $user = "";
+    $user = "root";
     $password = "";
-    $database= "";
+    $database= "tcc_etec";
     $connection = new mysqli($host, $user, $password, $database);
     if ($connection->connect_error){
-        die("Connection failed: ". $connection->connect-error);
+        die("Connection failed: ". $connection->connect_error);
     }
 
 ?>
-
-<?php require_once('./php/footer.php'); ?>

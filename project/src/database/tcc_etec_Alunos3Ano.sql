@@ -16,28 +16,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `teacher`
+-- Table structure for table `Alunos3Ano`
 --
 
-DROP TABLE IF EXISTS `teacher`;
+DROP TABLE IF EXISTS `Alunos3Ano`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `teacher` (
-  `teacher_id` int NOT NULL AUTO_INCREMENT,
-  `teacher_login` varchar(80) NOT NULL,
-  `teacher_password` varchar(80) NOT NULL,
-  PRIMARY KEY (`teacher_id`)
+CREATE TABLE `Alunos3Ano` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `login` varchar(80) NOT NULL,
+  `senha` varchar(80) NOT NULL,
+  `serie` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_Aluno3AnoSerie` (`serie`),
+  CONSTRAINT `FK_Aluno3AnoSerie` FOREIGN KEY (`serie`) REFERENCES `Sala` (`serie`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `teacher`
---
-
-LOCK TABLES `teacher` WRITE;
-/*!40000 ALTER TABLE `teacher` DISABLE KEYS */;
-/*!40000 ALTER TABLE `teacher` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -48,4 +42,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-08 10:00:49
+-- Dump completed on 2024-04-02 14:07:53

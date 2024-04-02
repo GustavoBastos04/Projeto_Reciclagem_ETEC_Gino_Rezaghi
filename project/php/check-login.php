@@ -12,7 +12,7 @@
         if($occupation == 'inputStudent'){
             
 
-            $database = "SELECT * FROM  student  WHERE st_login = '".$name."';";
+            $database = "SELECT * FROM    WHERE  = '".$name."';";
             $result = $connection->query($database);
 
             $search = mysqli_fetch_array($result);
@@ -30,7 +30,7 @@
             $connection->close();
         }
         if($occupation == 'inputTeacher'){
-            $database = "SELECT * FROM  teacher  WHERE teacher_login = '".$name."';";
+            $database = "SELECT * FROM    WHERE  = '".$name."';";
             $result = $connection->query($database);
 
             $search = mysqli_fetch_array($result);

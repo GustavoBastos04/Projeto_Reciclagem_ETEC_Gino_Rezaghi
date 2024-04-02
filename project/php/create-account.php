@@ -1,5 +1,5 @@
-<?php require_once("header.php");?>
-    <form method="post" uaction="create-account-action.php">
+<?php require_once("./header.php");?>
+    <form method="post" action="create-account-action.php">
         
         <label>Estudante ou professor?</label>
 
@@ -27,4 +27,4 @@
         <button type="submit">Criar conta</button>
 
     </form>
-<?php require_once("footer.php")?>
+<?php require_once("./footer.php");?>
