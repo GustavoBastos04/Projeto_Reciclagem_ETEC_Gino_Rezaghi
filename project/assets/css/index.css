@@ -1,0 +1,47 @@
+.main-container{ 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(12, 71, 12);
+    width: 40%;
+    height: 60%;
+    padding-top: 1%;
+    
+}
+
+.title {
+    text-align: center;
+    width:75%;
+    height: 25%;
+    margin: auto;
+    padding: 0;
+    padding-top: 3%;
+    margin-top: 2%;
+}
+
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 65%;
+    height: 30%;
+}
+
+.button {
+    text-align: center;
+    font-size: 15px;
+    padding:0%;
+    margin: 10px;  
+}
+.button:hover {
+    font-size: 20px;
+}
+
+.title,  .button {
+    background-color: green;
+    color: white;
+}
+
+@media screen {
+    
+}

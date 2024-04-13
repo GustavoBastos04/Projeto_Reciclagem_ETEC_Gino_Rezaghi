@@ -21,7 +21,7 @@
                     echo '<a href="menu.php">Saudações</a>';
                 }
                 else{
-                    echo '<a href="../index.php">Login não encontrado</a>';
+                    echo '<a href="./index.php">Login não encontrado</a>';
                 }
             }
             else{
@@ -39,7 +39,7 @@
                     echo '<a href="menu.php">Saudações</a>';
                 }
                 else{
-                    echo '<a href="../index.php">Login não encontrado</a>';
+                    echo '<a href="./index.php">Login não encontrado</a>';
                 }
             }
             else{
