@@ -21,6 +21,12 @@ tanto a quantidade quanto o tipo de material coletado. Além disso, cada aluno p
   <li><a href="./code/database-connection.php">Neste arquivo PHP</a>, coloque os dados <i>$host</i>, <i>$user</i>, <i>$password</i>, <i>$database</i> de acordo com o seu banco de dados local</li>
   <li>Pronto! Agora é só abrir o arquivo <a href="./code/index.php">index.php</a> em algum navegador moderno</li>  
 </ol>
+<h2>Desenvolvedores</h2>
+<ul>
+<li>@GustavoBastos04 - Gustavo Bastos</li> 
+<li>@Gilsis - Giovana Isis</li> 
+<li>@Braca-E - Evelin Braca</li>
+</ul>
 
 <h2>🇬🇧 EN</h2>
 <h1>Recycling Project Management Platform for ETEC Gino Rezaghi Students</h1>
@@ -40,3 +46,10 @@ tanto a quantidade quanto o tipo de material coletado. Além disso, cada aluno p
   <li><a href="./code/database-connection.php">At this .php file</a>, insert <i>$host</i>, <i>$user</i>, <i>$password</i>, <i>$database</i> according to your database setup</li>
   <li>All right! Now you just need to open <a href="./code/index.php">index.php</a> on a modern modern browser</li>  
 </ol>
+
+<h2>Developers</h2>
+<ul>
+<li>@GustavoBastos04 - Gustavo Bastos</li> 
+<li>@Gilsis - Giovana Isis</li> 
+<li>@Braca-E - Evelin Braca</li>
+</ul>
