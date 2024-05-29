@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.36, for Linux (x86_64)
 --
--- Host: localhost    Database: tcc_etec
+-- Host: localhost    Database: projeto_reciclagem
 -- ------------------------------------------------------
 -- Server version	8.0.36-0ubuntu0.22.04.1
 
@@ -16,19 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Professora`
+-- Table structure for table `Sala`
 --
 
-DROP TABLE IF EXISTS `Professora`;
+DROP TABLE IF EXISTS `Sala`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Professora` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `login` varchar(80) NOT NULL,
-  `senha` varchar(80) NOT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE `Sala` (
+  `serie` varchar(10) NOT NULL,
+  `pontuacaoTotal` int DEFAULT '0',
+  PRIMARY KEY (`serie`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Sala`
+--
+
+LOCK TABLES `Sala` WRITE;
+/*!40000 ALTER TABLE `Sala` DISABLE KEYS */;
+INSERT INTO `Sala` VALUES ('1E',0),('1L',0),('1M',0),('2E',0),('2L',0),('2M',0),('3E',0),('3L',0),('3M',0);
+/*!40000 ALTER TABLE `Sala` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -39,4 +48,4 @@ CREATE TABLE `Professora` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-02 14:07:53
+-- Dump completed on 2024-05-29 15:49:53

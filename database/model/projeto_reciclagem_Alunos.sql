@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.36, for Linux (x86_64)
 --
--- Host: localhost    Database: tcc_etec
+-- Host: localhost    Database: projeto_reciclagem
 -- ------------------------------------------------------
 -- Server version	8.0.36-0ubuntu0.22.04.1
 
@@ -16,21 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `DemaisAlunos`
+-- Table structure for table `Alunos`
 --
 
-DROP TABLE IF EXISTS `DemaisAlunos`;
+DROP TABLE IF EXISTS `Alunos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `DemaisAlunos` (
+CREATE TABLE `Alunos` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(80) NOT NULL,
-  `serie` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_DemaisAlunosSerie` (`serie`),
-  CONSTRAINT `FK_DemaisAlunosSerie` FOREIGN KEY (`serie`) REFERENCES `Sala` (`serie`)
+  `RM` varchar(5) NOT NULL,
+  `pontos` int NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Alunos`
+--
+
+LOCK TABLES `Alunos` WRITE;
+/*!40000 ALTER TABLE `Alunos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Alunos` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -41,4 +48,4 @@ CREATE TABLE `DemaisAlunos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-02 14:07:53
+-- Dump completed on 2024-05-29 15:49:53

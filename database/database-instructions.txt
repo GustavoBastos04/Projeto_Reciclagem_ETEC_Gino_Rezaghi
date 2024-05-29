@@ -1,0 +1,29 @@
+CREATE DATABASE projeto_reciclagem;
+
+CREATE TABLE `Alunos3Ano` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(80) NOT NULL,
+  `senha` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Professora` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(80) NOT NULL,
+  `senha` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Sala` (
+  `serie` varchar(10) NOT NULL,
+  `pontuacaoTotal` int DEFAULT 0,
+  PRIMARY KEY (`serie`)
+);
+
+CREATE TABLE `Alunos` (
+`id` int NOT NULL AUTO_INCREMENT,
+  `RM` varchar(5) NOT NULL,
+  `pontos`int not null,
+  PRIMARY KEY (`id`));
+
+INSERT INTO Sala (serie) VALUES ("1E"), ("2E"), ("3E"), ("1L"), ("2L"), ("3L"), ("1M"), ("2M"), ("3M");
